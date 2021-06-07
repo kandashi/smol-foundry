@@ -1,0 +1,36 @@
+:root {
+    --sceneHeight : 100px;
+    --sceneTextHeight : 100px;
+    --actorHeight : 50px;
+    --actorTextHeight : 48px;
+    --folderHeight : 24px;
+}
+
+#scenes .scene {
+    height : var(--sceneHeight);
+    background-position: center;
+}
+
+#scenes .scene h3 {
+    line-height: var(--sceneTextHeight);
+}
+
+.directory .directory-list .directory-item.entity {
+    line-height: var(--actorHeight);
+}
+
+.directory .directory-list .directory-item img {
+    height: var(--actorHeight);
+    width: var(--actorHeight);
+    object-position: center;
+}
+
+li.folder > .folder-header h3 {
+    line-height: var(--folderHeight);
+}
+li.folder > .folder-header {
+    line-height: var(--folderHeight);
+    padding: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
