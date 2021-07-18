@@ -15,6 +15,11 @@
     line-height: var(--sceneTextHeight);
 }
 
+#combat li.combatant .token-image {
+    margin: 0;
+    height: 48px;
+}
+
 .directory .directory-list .directory-item.entity {
     line-height: var(--actorHeight);
 }
