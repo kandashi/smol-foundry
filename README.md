@@ -3,3 +3,4 @@
 Condenses the actor/item/scene ui elements in the sidebar. Customizable sizes in the module settings
 
 ![image](https://user-images.githubusercontent.com/1347785/121268517-0a756180-c8b6-11eb-8616-0af7bcb6a878.png)
+![image](https://user-images.githubusercontent.com/1347785/126052439-be8d516d-d6fb-456d-849c-935acf75606a.png)
