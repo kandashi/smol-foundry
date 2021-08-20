@@ -1,4 +1,4 @@
-:root {
+body :root {
     --sceneHeight : 100px;
     --sceneTextHeight : 100px;
     --actorHeight : 50px;
@@ -6,34 +6,34 @@
     --folderHeight : 24px;
 }
 
-#scenes .scene {
+body #scenes .scene {
     height : var(--sceneHeight);
     background-position: center;
 }
 
-#scenes .scene h3 {
+body #scenes .scene h3 {
     line-height: var(--sceneTextHeight);
 }
 
-#combat li.combatant .token-image {
+body #combat li.combatant .token-image {
     margin: 0;
     height: 48px;
 }
 
-.directory .directory-list .directory-item.entity {
+body .directory .directory-list .directory-item.entity {
     line-height: var(--actorHeight);
 }
 
-.directory .directory-list .directory-item img {
+body .directory .directory-list .directory-item img {
     height: var(--actorHeight);
     width: var(--actorHeight);
     object-position: center;
 }
 
-li.folder > .folder-header h3 {
+body li.folder > .folder-header h3 {
     line-height: var(--folderHeight);
 }
-li.folder > .folder-header {
+body li.folder > .folder-header {
     line-height: var(--folderHeight);
     padding: 0px;
     padding-left: 6px;
