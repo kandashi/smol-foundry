@@ -16,28 +16,19 @@ Hooks.once('init', async function() {
         config: true,
         onChange: refresh
     });
-
-    game.settings.register("smol-foundry", "folderSize", {
-        name: 'Folder Height',
-        scope: 'client',
-        type: Number,
-        default: 24,
-        config: true,
-        onChange: refresh
-    });
 });
-Hooks.once('ready', refresh);
+Hooks.once('canvasReady', readyRefresh);
+
+function readyRefresh(){
+    setTimeout(refresh, 50)
+}
 
 function refresh(){
     const AS = game.settings.get("smol-foundry", "actorSize")
     const SS = game.settings.get("smol-foundry", "sceneSize")
-    const FS = game.settings.get("smol-foundry", "folderSize")
 
-    document.documentElement.style.setProperty('--sceneHeight', `${SS}px`);
-    document.documentElement.style.setProperty('--sceneTextHeight', `${SS}px`);
-    document.documentElement.style.setProperty('--actorHeight', `${AS}px`);
-    document.documentElement.style.setProperty('--actorTextHeight', `${AS-2}px`);
-    document.documentElement.style.setProperty('--folderHeight', `${FS}px`);
+    document.querySelector("section#scenes").style.setProperty('--sidebar-scene-height', `${SS}px`);
+    document.documentElement.style.setProperty('--sidebar-item-height', `${AS}px`);
 }
 
 
