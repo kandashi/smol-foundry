@@ -17,16 +17,11 @@ Hooks.once('init', async function() {
         onChange: refresh
     });
 });
-Hooks.once('canvasReady', readyRefresh);
-
-function readyRefresh(){
-    setTimeout(refresh, 50)
-}
+Hooks.on("renderSidebarDirectory", refresh)
 
 function refresh(){
     const AS = game.settings.get("smol-foundry", "actorSize")
     const SS = game.settings.get("smol-foundry", "sceneSize")
-
     document.querySelector("section#scenes").style.setProperty('--sidebar-scene-height', `${SS}px`);
     document.documentElement.style.setProperty('--sidebar-item-height', `${AS}px`);
 }
