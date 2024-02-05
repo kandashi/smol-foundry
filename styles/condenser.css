@@ -1,0 +1,7 @@
+body :root {
+    --SF-comp-height: 50px;
+}
+
+li.directory-item.compendium.locked.flexcol {
+    height: var(--SF-comp-height) !important
+}
